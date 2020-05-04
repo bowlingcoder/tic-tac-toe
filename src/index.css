@@ -1,13 +1,142 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 0 auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.square {
+  background-color: aliceblue;
+  border: 1px solid #999;
+  float: left;
+  position: relative;
+  font-size: 36px;
+  font-weight: bold;
+  height: 90%;
+  margin-left: 2%;
+  min-height: 100px;
+  width: 31%;
+  text-shadow: 0 -1px 0 #000;
+	box-shadow: 1px 1px 1px #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+}
+
+.winning-square{
+  background: gold;
+  border: 1px solid #999;
+  float: left;
+  position: relative;
+  font-size: 36px;
+  font-weight: bold;
+  height: 90%;
+  margin-left: 2%;
+  min-height: 100px;
+  width: 31%;
+  text-shadow: 0 -1px 0 #000;
+	box-shadow: 1px 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+}
+
+.square:hover{
+  background-color: blue;
+}
+
+.winning-square:hover{
+  background-color: gold;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  background-color: white;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.game-area{
+  /*margin: 0 auto;*/
+  text-align: center;
+  float: right;
+  width: 75%;
+  height: 100%;
+}
+
+.game-status,.move-header{
+  height: 10vh;
+  vertical-align: middle;
+  font-size: 2vw;
+  padding: 2.5vh 0;
+}
+
+.game-board{
+  height: 50vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width : auto;
+  
+}
+.board-row{
+  height: 33%
+}
+
+.game-moves{
+  /*margin: 0 auto;*/
+  text-align: center;
+  float: right;
+  width : 25%;
+  height: 100%;
+}
+nav {
+  align-items: center;
+  justify-items: center;
+  height: 50vh;
+  padding: 2.5vh 0;
+  width: auto;
+}
+.moves{
+  align-items: center;
+  justify-items: center;
+  list-style-type: none;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  height: 45vh;
+  padding: 0;
+  width: auto;
+}
+
+.moves > li {
+  width: 100%;
+  margin-bottom: 1%;
+}
+
+li > button {
+  /*height: 3vh;*/
+  margin-bottom: 1vh;
+  text-shadow: 0 -1px 0 #000;
+	box-shadow: 1px 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+}
+
+.bold{
+  background-color: lightgreen;
+}
+
+nav ul{overflow:hidden; overflow-y:scroll;}
+
+.toggle,.game-reset{
+  height: 10vh;
+  padding-top: 2.5vh;
+}
+
+.toggle button, .game-reset button{
+  text-shadow: 0 -1px 0 #000;
+	box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+  font-size: 1vw;
+  margin: 0 5%;
 }
