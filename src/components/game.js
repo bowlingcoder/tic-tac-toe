@@ -217,6 +217,8 @@ function calculateWinner(squares) {
   return null;
 }
 
+/*
+Currently Unused
 function sleep(milliseconds) {
   const date = Date.now();
   let currentDate = null;
@@ -224,3 +226,4 @@ function sleep(milliseconds) {
     currentDate = Date.now();
   } while (currentDate - date < milliseconds);
 }
+*/

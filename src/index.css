@@ -17,9 +17,10 @@ body {
   font-size: 36px;
   font-weight: bold;
   height: 90%;
-  margin-left: 2%;
+  margin-left: 1%;
   min-height: 100px;
-  width: 31%;
+  height: 100%;
+  width: 32%;
   text-shadow: 0 -1px 0 #000;
 	box-shadow: 1px 1px 1px #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
 }
@@ -32,23 +33,16 @@ body {
   font-size: 36px;
   font-weight: bold;
   height: 90%;
-  margin-left: 2%;
+  margin-left: 1%;
   min-height: 100px;
-  width: 31%;
+  height: 100%;
+  width: 32%;
   text-shadow: 0 -1px 0 #000;
 	box-shadow: 1px 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
 }
 
-.square:hover{
-  background-color: blue;
-}
-
-.winning-square:hover{
-  background-color: gold;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
+.square:hover, .history:hover, .winning-square:hover, .bold:hover{
+  background-color: rgb(2, 27, 110);
 }
 
 .game {
@@ -60,7 +54,6 @@ body {
 }
 
 .game-area{
-  /*margin: 0 auto;*/
   text-align: center;
   float: right;
   width: 75%;
@@ -83,16 +76,17 @@ body {
   
 }
 .board-row{
-  height: 33%
+  height: 32%;
+  margin-bottom: 1%;
 }
 
 .game-moves{
-  /*margin: 0 auto;*/
   text-align: center;
   float: right;
   width : 25%;
   height: 100%;
 }
+
 nav {
   align-items: center;
   justify-items: center;
@@ -100,6 +94,7 @@ nav {
   padding: 2.5vh 0;
   width: auto;
 }
+
 .moves{
   align-items: center;
   justify-items: center;
@@ -116,10 +111,12 @@ nav {
   margin-bottom: 1%;
 }
 
-li > button {
-  /*height: 3vh;*/
+.history, .bold {
+  background-color: aliceblue;
   margin-bottom: 1vh;
-  text-shadow: 0 -1px 0 #000;
+  font-size: 20px;
+  color: black;
+  /*text-shadow: 0 -1px 0 #000;*/
 	box-shadow: 1px 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
 }
 
